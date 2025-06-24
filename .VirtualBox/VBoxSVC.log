@@ -1,0 +1,150 @@
+00:00:00.004942 main     VirtualBox COM Server 7.1.8 r168469 win.amd64 (Apr 11 2025 16:45:31) release log
+00:00:00.004944 main     Log opened 2025-04-28T10:35:03.103822000Z
+00:00:00.004944 main     Build Type: release
+00:00:00.004953 main     OS Product: Windows 11
+00:00:00.004954 main     OS Release: 10.0.26100
+00:00:00.004954 main     OS Service Pack: 
+00:00:00.049370 main     DMI Product Name: HP Laptop 15s-fr2xxx
+00:00:00.063365 main     DMI Product Version:  
+00:00:00.063380 main     Firmware type: UEFI
+00:00:00.063979 main     Secure Boot: Enabled
+00:00:00.064003 main     Host RAM: 7834MB (7.6GB) total, 814MB available
+00:00:00.064008 main     Executable: C:\Program Files\Oracle\VirtualBox\VBoxSVC.exe
+00:00:00.064009 main     Process ID: 25064
+00:00:00.064009 main     Package type: WINDOWS_64BITS_GENERIC
+00:00:00.064013 main     Windows Features:
+00:00:00.064013 main       Core Isolation (Memory Integrity): ENABLED
+00:00:00.181214          VirtualBox: object creation starts
+00:00:00.181486          Home directory: 'C:\Users\harik\.VirtualBox'
+00:00:00.182919          Installed Drivers:
+00:00:00.197403            C:\WINDOWS\System32\drivers\VBoxSup.sys (Version: 7.1.8.18469)
+00:00:00.197775            C:\WINDOWS\System32\drivers\VBoxUSBMon.sys (Version: 7.1.8.18469)
+00:00:00.198107            C:\WINDOWS\system32\DRIVERS\VBoxNetLwf.sys (Version: 7.1.8.18469)
+00:00:00.198402            C:\WINDOWS\system32\DRIVERS\VBoxNetAdp6.sys (Version: 7.1.8.18469)
+00:00:00.203601          usbLibGetDevices: Starting USB device enumeration
+00:00:00.217869          Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&300143a6&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 3
+00:00:00.217943          Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&300143a6&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 10
+00:00:00.221319          usbLibGetDevices: Found 2 USB devices, 0 captured
+00:00:00.221375          USB: Unknown USB device detected (idVendor: 0x0bda, idProduct: 0xb00c)
+00:00:00.221417          USB: Unknown USB device detected (idVendor: 0x13d3, idProduct: 0x56c9)
+00:00:00.252053          netIfIsWireless: CreateFile on '\\.\{711F0FC3-43C9-4236-B158-82EFDD029815}' failed with rcWin=2 (0x2) - ignoring
+00:00:00.252398          netIfIsWireless: CreateFile on '\\.\{381A6644-1E45-4231-BFE3-4D93366848D0}' failed with rcWin=2 (0x2) - ignoring
+00:00:00.252827          netIfIsWireless: CreateFile on '\\.\{A60C1890-0E9F-4341-A57A-E4508F9F8088}' failed with rcWin=2 (0x2) - ignoring
+00:00:00.257298          HostDnsMonitor: initializing
+00:00:00.270086          HostDnsMonitor: updating information
+00:00:00.270129          HostDnsMonitor: old information
+00:00:00.270130            no server entries
+00:00:00.270131            no domain set
+00:00:00.270131            no search string entries
+00:00:00.270131          HostDnsMonitor: new information
+00:00:00.270131            server 1: 8.8.8.8
+00:00:00.270132            server 2: 8.8.4.4
+00:00:00.270132            no domain set
+00:00:00.270132            no search string entries
+00:00:00.282637          VD: VDInit finished with VINF_SUCCESS
+00:00:00.284431          VirtualBox: object created
+00:00:00.422541          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:00.427620          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:00:00.427910          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:00.433500          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:00:00.433823          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:00.437123          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:00:00.989279          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:00.992160          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:00:01.045593          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:01.048970          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:00:01.484742          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:01.488199          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:01:49.827740          Unattended: .discinfo: Unknown: release='9'
+00:01:49.836972          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:01:49.849046          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:01:49.849777          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:01:49.856381          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:10.076273 createBase Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:10.080086 createBase Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:10.085536          Platform architecture set to 'x86'
+00:04:10.085795          Platform architecture set to 'x86'
+00:04:10.085810          Platform architecture set to 'x86'
+00:04:10.086627          Platform architecture set to 'x86'
+00:04:10.088278          Saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox" with version "1.19-windows"
+00:04:10.090236          Finished saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox"
+00:04:10.090436          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:10.096595          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:10.099724          Platform architecture set to 'x86'
+00:04:10.102187          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:10.106122          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:10.110479          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:10.113828          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:10.114399          Saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox" with version "1.19-windows"
+00:04:10.116970          Finished saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox"
+00:04:10.141391          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:10.145505          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:10.505069          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:10.603007          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is PoweredOff)}, preserve=false aResultDetail=0
+00:04:14.962299          Launched VM: 3998208320 pid: 24856 (0x6118) frontend: GUI/Qt name: centos 
+00:04:14.999293          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:15.015819          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is PoweredOff)}, preserve=false aResultDetail=0
+00:04:21.011464          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:21.024239          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:21.032300          Platform architecture set to 'x86'
+00:04:21.123226          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:21.129869          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is PoweredOff)}, preserve=false aResultDetail=0
+00:04:21.597680          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={No extension pack by the name 'Oracle VirtualBox Extension Pack' was found}, preserve=false aResultDetail=0
+00:04:21.648579          ERROR [COM]: aRC=E_FAIL (0x80004005) aIID={bea3ef5c-de2f-4b74-aa3a-15d6249371a0} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:04:23.332573          netIfIsWireless: CreateFile on '\\.\{711F0FC3-43C9-4236-B158-82EFDD029815}' failed with rcWin=2 (0x2) - ignoring
+00:04:23.333045          netIfIsWireless: CreateFile on '\\.\{381A6644-1E45-4231-BFE3-4D93366848D0}' failed with rcWin=2 (0x2) - ignoring
+00:04:23.333372          netIfIsWireless: CreateFile on '\\.\{A60C1890-0E9F-4341-A57A-E4508F9F8088}' failed with rcWin=2 (0x2) - ignoring
+00:04:23.338078          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:23.340954          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:23.341605          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:23.345326          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:23.347563          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:23.352264          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:23.355130          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:23.358357          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:23.359513          Saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:04:23.368371          Finished saving settings file "C:\Users\harik\.VirtualBox\VirtualBox.xml"
+00:04:23.719429          ERROR [COM]: aRC=E_FAIL (0x80004005) aIID={bea3ef5c-de2f-4b74-aa3a-15d6249371a0} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:04:23.735142          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={SessionMachine} aText={The machine is not mutable or saved (state is Starting)}, preserve=false aResultDetail=0
+00:04:23.783501          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={SessionMachine} aText={The machine is not mutable or saved (state is Starting)}, preserve=false aResultDetail=0
+00:04:23.785181          Saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox" with version "1.19-windows"
+00:04:23.795396          Finished saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox"
+00:04:23.822000          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:23.838396          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:23.854819          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is Starting)}, preserve=false aResultDetail=0
+00:04:24.708937          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7d510820-a678-4730-a862-818dcd3fbed0} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:04:24.709464          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7d510820-a678-4730-a862-818dcd3fbed0} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:04:24.709961          HostDnsMonitorProxy::GetDomainName: no domain set
+00:04:24.709999          HostDnsMonitorProxy::GetNameServers:
+00:04:24.710005            name server 1: 8.8.8.8
+00:04:24.710008            name server 2: 8.8.4.4
+00:04:24.710041          HostDnsMonitorProxy::GetSearchStrings:
+00:04:24.710046            no search string entries
+00:04:24.724100          ERROR [COM]: aRC=E_FAIL (0x80004005) aIID={bea3ef5c-de2f-4b74-aa3a-15d6249371a0} aComponent={RecordingSettingsWrap} aText={Recording not started}, preserve=false aResultDetail=0
+00:04:24.788467          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:24.805252          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is Running)}, preserve=false aResultDetail=0
+00:04:43.751723          Saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox" with version "1.19-windows"
+00:04:43.764526          Finished saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox"
+00:04:43.776165          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:43.797255          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is Running)}, preserve=false aResultDetail=0
+00:04:53.799426          Saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox" with version "1.19-windows"
+00:04:53.812785          Finished saving settings file "C:\Users\harik\VirtualBox VMs\centos_\centos_.vbox"
+00:04:53.846146          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={5bfd8965-b81b-469f-8649-f717ce97a5d5} aComponent={NvramStoreWrap} aText={The UEFI NVRAM file is not existing for this machine}, preserve=false aResultDetail=0
+00:04:53.857293          ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={The machine is not mutable, saved or running (state is Running)}, preserve=false aResultDetail=0
+00:05:36.039875 dns-monitor HostDnsMonitor: updating information
+00:05:36.039916 dns-monitor HostDnsMonitor: unchanged
+00:17:44.547099 USBPROXY usbLibGetDevices: Starting USB device enumeration
+00:17:44.610671 USBPROXY Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&300143a6&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 3
+00:17:44.613415 USBPROXY Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&300143a6&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 10
+00:17:44.616660 USBPROXY usbLibGetDevices: Found 2 USB devices, 0 captured
+00:17:44.914147 USBPROXY usbLibGetDevices: Starting USB device enumeration
+00:17:44.914357 USBPROXY Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&300143a6&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 3
+00:17:44.914449 USBPROXY Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&300143a6&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 10
+00:17:44.915160 USBPROXY usbLibGetDevices: Found 2 USB devices, 0 captured
+00:20:46.163733 dns-monitor HostDnsMonitor: updating information
+00:20:46.163799 dns-monitor HostDnsMonitor: unchanged
+00:20:48.174145 dns-monitor HostDnsMonitor: updating information
+00:20:48.174170 dns-monitor HostDnsMonitor: unchanged
+00:22:13.639584 main     WM_QUERYENDSESSION: critical close (0x40000001)
+00:22:13.648922 main     VBoxSvc has active connections: bActivity = false, lock count = 2
+00:22:13.710415 main     WM_ENDSESSION: critical close (TRUE/0x40000001)
