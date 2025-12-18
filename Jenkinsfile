@@ -10,7 +10,6 @@ pipeline {
     }
 
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-service-account')
         DIR = "/var/lib/jenkins/workspace/new-job/usecase"
     }
 
@@ -31,31 +30,38 @@ pipeline {
             }
         }
 
-        stage('Terraform Action') {
+        stage('Terraform Apply') {
             when {
                 expression { params.ACTION == 'apply' }
             }
             steps {
-                dir("${DIR}") {
-                    sh 'terraform plan'
-                    sh 'terraform apply --auto-approve'
+                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
+                    dir("${DIR}") {
+                        sh '''
+                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
+                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
+                            terraform init
+                            terraform apply --auto-approve
+                        '''
+                    }
                 }
             }
         }
 
         stage('Terraform Destroy') {
             when {
-                expression { params.TERRAFORM_ACTION == 'destroy' }
+                expression { params.ACTION == 'destroy' }
             }
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    sh '''
-                        gcloud auth activate-service-account --key-file=$GCLOUD_KEY
-                        export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                        cd Terraform
-                        terraform init
-                        terraform destroy --auto-approve
-                    '''
+                    dir("${DIR}") {
+                        sh '''
+                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
+                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
+                            terraform init
+                            terraform destroy --auto-approve
+                        '''
+                    }
                 }
             }
         }
