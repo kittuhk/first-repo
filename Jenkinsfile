@@ -5,7 +5,7 @@ pipeline {
         choice(
             name: 'ACTION',
             choices: ['apply', 'destroy'],
-            description: 'Select what Terraform should do'
+            description: 'Select Terraform action'
         )
     }
 
@@ -14,7 +14,21 @@ pipeline {
         stage('Checkout Usecase Repo') {
             steps {
                 cleanWs()
-                sh 'git clone https://github.com/kittuhk/usecase.git'
+                git branch: 'main', url: 'https://github.com/kittuhk/usecase.git'
+            }
+        }
+
+        stage('Terraform Init') {
+            steps {
+                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
+                    dir('usecase') {
+                        sh '''
+                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
+                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
+                            terraform init
+                        '''
+                    }
+                }
             }
         }
 
@@ -23,15 +37,8 @@ pipeline {
                 expression { params.ACTION == 'apply' }
             }
             steps {
-                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    dir('/var/lib/jenkins/workspace/new-job/usecase') {
-                        sh '''
-                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
-                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                            terraform init
-                            terraform apply --auto-approve
-                        '''
-                    }
+                dir('usecase') {
+                    sh 'terraform apply --auto-approve'
                 }
             }
         }
@@ -41,15 +48,8 @@ pipeline {
                 expression { params.ACTION == 'destroy' }
             }
             steps {
-                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    dir('/var/lib/jenkins/workspace/new-job/usecase') {
-                        sh '''
-                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
-                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                            terraform init
-                            terraform destroy --auto-approve
-                        '''
-                    }
+                dir('usecase') {
+                    sh 'terraform destroy --auto-approve'
                 }
             }
         }
