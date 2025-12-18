@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout Usecase Repo') {
             steps {
                 cleanWs()
-                git branch: 'main', url: 'https://github.com/kittuhk/usecase.git'
+                sh 'git clone https://github.com/kittuhk/usecase.git'
             }
         }
 
