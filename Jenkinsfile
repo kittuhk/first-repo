@@ -32,29 +32,27 @@ pipeline {
 
         stage('Terraform Apply') {
             when {
-                expression { params.ACTION == 'apply' }
+                expression { params.TERRAFORM_ACTION == 'apply' }
             }
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    dir("${DIR}") {
-                        sh '''
-                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
-                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                            terraform init
-                            terraform apply --auto-approve
-                        '''
-                    }
+                    sh '''
+                        gcloud auth activate-service-account --key-file=$GCLOUD_KEY
+                        export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
+                        terraform init
+                        terraform apply --auto-approve
+                    '''
                 }
             }
         }
 
         stage('Terraform Destroy') {
             when {
-                expression { params.ACTION == 'destroy' }
+                expression { params.TERRAFORM_ACTION == 'destroy' }
             }
             steps {
-                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    dir("${DIR}") {
+                dir("${DIR}") {
+                    withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
                         sh '''
                             gcloud auth activate-service-account --key-file=$GCLOUD_KEY
                             export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
