@@ -10,18 +10,17 @@ pipeline {
     }
 
     environment {
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-service-account')
         DIR = "/var/lib/jenkins/workspace/new-job/usecase"
     }
 
     stages {
-
-        stage('checkout SCM') {
-            steps {
-                cleanWs()
-                sh "git clone https://github.com/kittuhk/usecase.git"
+        stage('checkout SCM'){
+            steps{
+                cleanWs() 
+               sh "git clone https://github.com/kittuhk/usecase.git"
             }
         }
-
         stage('Terraform Init') {
             steps {
                 dir("${DIR}") {
@@ -30,32 +29,31 @@ pipeline {
             }
         }
 
-        stage('Terraform Apply') {
+        stage('Terraform Action') {
             when {
-                expression { params.TERRAFORM_ACTION == 'apply' }
-            }
-            steps {
-                sh 'terraform init'
-                sh 'terraform apply --auto-approve'
-            }
-        }
-
-        stage('Terraform Destroy') {
-            when {
-                expression { params.TERRAFORM_ACTION == 'destroy' }
+                expression { params.ACTION == 'apply' }
             }
             steps {
                 dir("${DIR}") {
-                    withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                        sh '''
-                            gcloud auth activate-service-account --key-file=$GCLOUD_KEY
-                            export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                            terraform init
-                            terraform destroy --auto-approve
-                        '''
-                    }
+                    sh 'terraform plan'
+                    sh 'terraform apply --auto-approve'
                 }
             }
         }
+
+stage('Terraform Destroy') {
+            when { expression { params.TERRAFORM_ACTION == 'destroy' } }
+            steps {
+                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
+                    sh '''
+                        gcloud auth activate-service-account --key-file=$GCLOUD_KEY
+                        export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
+                        cd usecase
+                        terraform init
+                        terraform destroy --auto-approve
+                    '''
+                }
+            }
+       }
     }
 }
