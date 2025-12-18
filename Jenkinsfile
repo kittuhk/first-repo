@@ -11,14 +11,14 @@ pipeline {
 
     environment {
         GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-service-account')
-        DIR = "/var/lib/jenkins/workspace/new-job"
+        DIR = "/var/lib/jenkins/workspace/new-job/usecase"
     }
 
     stages {
         stage('checkout SCM'){
             steps{
                 cleanWs() 
-               sh "git clone https://github.com/Nagasai634/team-usecases.git"
+               sh "git clone https://github.com/kittuhk/usecase.git"
             }
         }
         stage('Terraform Init') {
