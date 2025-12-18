@@ -24,7 +24,7 @@ pipeline {
             }
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    dir('usecase') {
+                    dir('/var/lib/jenkins/workspace/new-job/usecase') {
                         sh '''
                             gcloud auth activate-service-account --key-file=$GCLOUD_KEY
                             export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
@@ -42,7 +42,7 @@ pipeline {
             }
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
-                    dir('usecase') {
+                    dir('/var/lib/jenkins/workspace/new-job/usecase') {
                         sh '''
                             gcloud auth activate-service-account --key-file=$GCLOUD_KEY
                             export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
