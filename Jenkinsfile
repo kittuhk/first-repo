@@ -23,7 +23,7 @@ pipeline {
                     sh '''
                         gcloud auth activate-service-account --key-file=$GCLOUD_KEY
                         export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                        cd usecase
+                        cd /var/lib/jenkins/workspace/new-job/usecase
                         terraform init
                         terraform apply --auto-approve
                     '''
@@ -38,7 +38,7 @@ pipeline {
                     sh '''
                         gcloud auth activate-service-account --key-file=$GCLOUD_KEY
                         export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
-                        cd usecase
+                        cd /var/lib/jenkins/workspace/new-job/usecase
                         terraform init
                         terraform destroy --auto-approve
                     '''
