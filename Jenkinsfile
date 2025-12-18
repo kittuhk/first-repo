@@ -15,12 +15,14 @@ pipeline {
     }
 
     stages {
-        stage('checkout SCM'){
-            steps{
-                cleanWs() 
-               sh "git clone https://github.com/kittuhk/usecase.git"
+
+        stage('checkout SCM') {
+            steps {
+                cleanWs()
+                sh "git clone https://github.com/kittuhk/usecase.git"
             }
         }
+
         stage('Terraform Init') {
             steps {
                 dir("${DIR}") {
@@ -43,12 +45,17 @@ pipeline {
 
         stage('Terraform Destroy') {
             when {
-                expression { params.ACTION == 'destroy' }
+                expression { params.TERRAFORM_ACTION == 'destroy' }
             }
             steps {
-                dir("${DIR}") {
-                    sh 'terraform init'
-                    sh 'terraform destroy --auto-approve'
+                withCredentials([file(credentialsId: 'gcp-service-account', variable: 'GCLOUD_KEY')]) {
+                    sh '''
+                        gcloud auth activate-service-account --key-file=$GCLOUD_KEY
+                        export GOOGLE_APPLICATION_CREDENTIALS=$GCLOUD_KEY
+                        cd Terraform
+                        terraform init
+                        terraform destroy --auto-approve
+                    '''
                 }
             }
         }
