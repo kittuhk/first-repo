@@ -38,7 +38,10 @@ pipeline {
             }
             steps {
                 dir('usecase') {
-                    sh 'terraform apply --auto-approve'
+                    sh '''
+                     terraform init 
+                     terraform apply --auto-approve
+                    ''' 
                 }
             }
         }
@@ -49,7 +52,10 @@ pipeline {
             }
             steps {
                 dir('usecase') {
-                    sh 'terraform destroy --auto-approve'
+                    sh '''
+                        terraform init
+                        terraform destroy --auto-approve
+                    '''
                 }
             }
         }
