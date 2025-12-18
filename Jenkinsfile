@@ -35,9 +35,8 @@ pipeline {
                 expression { params.TERRAFORM_ACTION == 'apply' }
             }
             steps {
-                      sh  'terraform init'
-                      sh  'terraform apply --auto-approve'
-                }
+                sh 'terraform init'
+                sh 'terraform apply --auto-approve'
             }
         }
 
